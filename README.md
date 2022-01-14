@@ -6,8 +6,9 @@ In order to run the program you must install: PyQt5, requestrs, and PyGame.
 Simply open the terminal on your OS and copy and paste the text below into it:
 
 pip install requests
-/n
+
 pip install PyQt5
+
 pip install pygame
 
 
