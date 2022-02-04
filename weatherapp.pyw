@@ -619,7 +619,7 @@ class Meat():
 
     def run_api(self, specify):
         contact = {'User-Agent': '(portfolio: https://github.com/gunraidan, contact: kiticanax@gmail.com)'}
-        response = requests.get (f'https://preview-api.weather.gov/points/{self.geolocation}', headers = contact)
+        response = requests.get (f'https://api.weather.gov/points/{self.geolocation}', headers = contact)
         self.data = response.json()
         forecast = self.data["properties"][specify]
         response = requests.get(forecast)
@@ -662,7 +662,7 @@ class Meat():
             day_1_temp = self.data["properties"]["periods"][0]["temperature"]
             Meat.transform(day_1_temp)
             Meat.paste_temp(self, self.day_1_t_screen.setText)
-            response = requests.get (f'https://preview-api.weather.gov/points/{self.geolocation}')
+            response = requests.get (f'https://api.weather.gov/points/{self.geolocation}')
             data = response.json()
             city = data["properties"]["relativeLocation"]["properties"]["city"]
             state = data["properties"]["relativeLocation"]["properties"]["state"]
